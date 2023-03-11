@@ -673,7 +673,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 406b1ecacdf98674e912022e6f2a557e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceGrab: {fileID: 1361734316}
+  distanceGrab: {fileID: 1744759835}
 --- !u!54 &696429544
 Rigidbody:
   m_ObjectHideFlags: 0

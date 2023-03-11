@@ -17,6 +17,7 @@ public class DistanceGrab : MonoBehaviour
     {
         float zValue = zRotation.action.ReadValue<float>();
         
+        // Debuggasin, että 0.6f on käsi n. 90 asteen kulmassa
         if (zValue > 0.6f)
         {
             RaycastHit hit;
