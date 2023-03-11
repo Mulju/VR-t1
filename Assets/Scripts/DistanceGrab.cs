@@ -21,14 +21,18 @@ public class DistanceGrab : MonoBehaviour
         if (zValue > 0.6f)
         {
             RaycastHit hit;
-            
             Ray ray = new Ray(transform.position, transform.forward);
             
+            // Et‰isyys mille objekti j‰tet‰‰n leijumaan
             Vector3 end = transform.position + (transform.forward * lineMaxLength);
 
             if(Physics.Raycast(ray, out hit) && hit.collider.gameObject.CompareTag("Grabbable"))
             {
                 hit.transform.position = end;
+
+                // Ymm‰rt‰‰kseni t‰m‰ laittaa osutun objektin fysiikan pois p‰‰lt‰
+                // Aiemmin se tippui k‰dest‰ kun kiihtyvyys kasvoi liian suureksi
+                // T‰m‰ pit‰‰ myˆs ottaa pois p‰‰lt‰, jota varten on toinen skripti
                 hit.collider.gameObject.GetComponent<Rigidbody>().isKinematic = true;
                 grabbed = true;
             }
